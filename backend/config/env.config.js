@@ -1,6 +1,6 @@
 import 'dotenv/config'
 
-const config = {
+const envConfig = {
     PORT: process.env.PORT,
     API: process.env.API,
     MONGODB_URI: process.env.MONGODB_URI,
@@ -8,4 +8,4 @@ const config = {
     
 }
 
-export default config
+export default envConfig
