@@ -9,17 +9,20 @@ export function uploadFonts(req, res) {
         return res.end("Only POST method is allowed.")
     }
 
-    const bb = new busboy({headers: req.headers})
+    const bb = busboy({headers: req.headers})
     const savePromises = []
 
-    bb.on("file", async (fieldName, file, fileName, encoding, mimetype) => {
-        const buffers = []
+    bb.on("file", async (fieldName, file, fileNameObj, encoding, mimetype) => {
 
+        const fileName = fileNameObj.filename || "";
         if(!fileName.endsWith('.ttf')){
             file.resume()
             console.log(`Rejected non-TTF file: ${fileName}`)
             return
         }
+
+        const buffers = []
+
 
         file.on('data', (data) => {
             buffers.push(data)

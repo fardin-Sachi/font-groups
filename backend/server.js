@@ -9,6 +9,10 @@ import { createFontGroup, deleteFontGroup, getFontGroups, updateFontGroup } from
 const {PORT, MONGODB_URI, MONGODB_COLLECTION} = envConfig
 
 const server = http.createServer((req, res)=> {
+    res.setHeader("Access-Control-Allow-Origin", "*")
+    res.setHeader("Access-Control-Allow-Methods", "GET POST DELETE PATCH")
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type")
+
     const [_, route, param] = req.url.split("/")
 
     // POST /upload-fonts
