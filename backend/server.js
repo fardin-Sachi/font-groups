@@ -67,11 +67,11 @@ const server = http.createServer((req, res)=> {
 
 
 // Server and Database connection
-mongoose.connect(`${MONGODB_URI}/${MONGODB_COLLECTION}`)
+mongoose.connect(`${MONGODB_URI}/font-groups`)
     .then(() => {
         console.log(`Connected to mongodb: ${mongoose.connection.name}`)
 
-        FontModel.createIndexes()
+        //FontModel.createIndexes()
 
         server.listen(PORT, () => console.log(`Server running on ${PORT}`))
     })
