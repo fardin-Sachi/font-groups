@@ -72,9 +72,14 @@ export async function getFonts(req, res) {
         return res.end("Only GET method is allowed.")
     }
 
+console.log("GET /fonts hit");
+
     try {
         //const fonts = await FontModel.find({}, "_id fileName")
         const fonts = await FontModel.find()
+
+console.log("Found fonts:", fonts);
+
         res.writeHead(200, {"Content-Type": "application/json"})
         res.end(JSON.stringify({fonts}))
     } catch (error) {
