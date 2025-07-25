@@ -1,5 +1,7 @@
 # Font Groups
 
+[Live Frontend](https://font-groups.vercel.app/) | [Live Backend API](https://font-groups-backend.vercel.app/)
+
 Font Groups is a full-stack application that allows users to upload `.ttf` fonts, group them, and manage font collections with ease. Built with a modern stack: **Node.js**, **MongoDB**, **React**, **Vite** and **Tailwind CSS**.
 
 ## Features
@@ -82,6 +84,11 @@ Starts the backend (node server.js) and serves the frontend using vite preview.
 - Backend: Node.js, MongoDB, Mongoose, Busboy/Formidable for file uploads
 
 - Monorepo Tooling: Concurrently
+
+## Deployment
+- Frontend: https://font-groups.vercel.app/
+
+- Backend API: https://font-groups-backend.vercel.app/
 
 ## License
 

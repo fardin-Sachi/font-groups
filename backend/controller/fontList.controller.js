@@ -78,7 +78,7 @@ export async function getFonts(req, res) {
         //const fonts = await FontModel.find({}, "_id fileName")
         const fonts = await FontModel.find()
 
-console.log("Found fonts:", fonts);
+//console.log("Found fonts:", fonts);
 
         res.writeHead(200, {"Content-Type": "application/json"})
         res.end(JSON.stringify({fonts}))
