@@ -18,6 +18,7 @@
   "dependencies": {
     "busboy": "^1.6.0",
     "dotenv": "^17.2.0",
+    "font-groups": "file:..",
     "formidable": "^3.5.4",
     "mongoose": "^8.16.3"
   }
