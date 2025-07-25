@@ -1,5 +1,9 @@
 .env
 
+/frontend/fontCollection/
+
+tasks.txt
+
 # Logs
 logs
 *.log
