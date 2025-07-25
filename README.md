@@ -43,6 +43,7 @@ Create a .env file inside the backend/ directory:
 
 MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/font-groups?retryWrites=true&w=majority
 PORT=8000
+MONGODB_COLLECTION=font-groups
 
 Replace <username> and <password> with your actual MongoDB Atlas credentials.
 
@@ -55,9 +56,6 @@ npm run dev
 ```
 
 Starts both backend (via Nodemon) and frontend (via Vite) concurrently.
-
-Open in browser
-[Visit in Browser](http://localhost:3000)
 
 ### Production Build
 
