@@ -69,7 +69,7 @@ const server = http.createServer((req, res)=> {
 // Server and Database connection
 mongoose.connect(`${MONGODB_URI}/${MONGODB_COLLECTION}`)
     .then(() => {
-        console.log("Connected to mongodb")
+        console.log(`Connected to mongodb: ${mongoose.connection.name}`)
 
         FontModel.createIndexes()
 
